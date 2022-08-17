@@ -36,6 +36,81 @@ button:hover{
     max-width: 950px;
     overflow: initial;
 }
+section .container{
+    text-align: start;
+}
+.big-card{
+    width: 100%;
+    border: 2px solid #404040;
+    border-radius: 30px;
+    padding: 40px 30px;
+    margin-bottom: 40px;
+    text-align: start;
+}
+.small-card{
+    width: 100%;
+    position: relative;
+    border: 2px solid #404040;
+    min-height: 300px;
+    border-radius: 15px;
+    padding: 25px 30px 20px 20px;
+    margin-bottom: 40px;
+}
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+}
+.card-footer .user{
+    display: flex;
+    align-items: center;
+}
+.user .img-holder{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #333;
+    margin-right: 10px;
+}
+.img-holder img{
+    width: 100%;
+    height: 100%;
+}
+.sec-content{
+    display: flex;
+    margin-bottom: 30px;
+}
+.greet button{
+    padding: 15px 60px;
+    margin: auto;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border-radius: 40px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.sec-content .greet h2{
+    margin-bottom: 20px;
+}
+.sec-content .info { 
+    margin-top: 30px;
+    display: flex;
+}
+.sec-content .info h3{
+    margin-bottom: 10px;
+}
+.sec-img{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.sec-img img{
+    width: 150%;
+    margin-bottom: -70px;
+}
+
+
 
 /* navbar */
 nav{
@@ -112,6 +187,7 @@ nav button.nav-toggler{
     width: 200px;
     text-align: start;
     padding: 0px 15px 15px 15px;
+    border-radius: 10px;
     margin-top: 10px;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.3s;
@@ -125,9 +201,13 @@ nav button.nav-toggler{
     border-bottom: 1px solid #8e8e8e;
 }
 
+
 /*Section 1*/
 .section-1{
     margin-top: 150px;
+}
+.section-1 .container{
+    text-align: center;
 }
 .section-1 h1{
     margin-bottom: 30px;
@@ -152,7 +232,7 @@ nav button.nav-toggler{
 }
 .section-1 img{
     margin-top: 30px;
-    width: 600px;
+    width: 700px;
 }
 .section-1 .sec1-info{
     display: flex;
@@ -164,6 +244,7 @@ nav button.nav-toggler{
     margin-top: 30px;
 }
 
+
 /*Section 2*/
 .section-2{
     margin-top: 100px;
@@ -172,85 +253,13 @@ nav button.nav-toggler{
     position: relative;
     text-align: start;
 }
-
-.sec2-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 30px;
-    z-index: 5;
+.section-2 .greet button{
+    background: #f1b280;
+    color: #333;    
 }
-.sec2-content .greet { 
-    grid-area: 1 / 1 / 2 / 2; 
-    text-align: left;
-}
-.greet h2{
-    margin-bottom: 20px;
-}
-.greet button{
-    padding: 15px 60px;
-    margin: auto;
-    margin-bottom: 15px;
+.section-2 .big-card{
     background: #f1b280;
     color: #333;
-    font-size: 14px;
-    border-radius: 40px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-.sec2-content .info { 
-    grid-area: 2 / 1 / 3 / 2;
-    display: flex;
-}
-.info h3{
-    margin-bottom: 10px;
-}
-.sec2-content .sec-img { 
-    grid-area: 1 / 2 / 3 / 3;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    margin-left: 30px;
-    margin-bottom: 40px;
-}
-.sec-img img{
-    width: 150%;
-}
-.section-2 .card{
-    position: absolute;
-    bottom: -120px;
-    width: 100%;
-    padding: 40px 50px 25px;
-    background: #f1b280;
-    color: #333;
-    border-radius: 20px;
-    z-index: -99;
-}
-.section-2 .card p{
-    max-width: 600px;
-}
-.section-2 .card .card-footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 15px;
-}
-.section-2 .card .card-footer .user{
-    display: flex;
-    align-items: center;
-}
-.user .img-holder{
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background: #333;
-    margin-right: 10px;
-}
-.img-holder img{
-    width: 100%;
-    height: 100%;
 }
 
 
@@ -258,76 +267,16 @@ nav button.nav-toggler{
 .section-3{
     margin-top: 300px;
 }
-.container{
-    position: relative;
-}
-.sec3-content{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-gap: 20px;
-    text-align: start;
-    z-index: 5;
-}
-.sec3-content .greet { 
-    grid-area: 1 / 2 / 2 / 3; 
-    
-}
-.sec3-content .greet button{
+.section-3 .greet button{
     background: #68e5a2;
     color: #333;
 }
-.sec3-content .info { 
-    grid-area: 2 / 2 / 3 / 3;
-    display: flex;
+.section-3 .sec-img{
+    justify-content: flex-end;
 }
-.info h3{
-    margin-bottom: 10px;
-}
-.sec3-content .sec-img { 
-    grid-area: 1 / 1 / 3 / 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20px;
-    margin-bottom: -30px;
-    z-index: 5;
-    pointer-events: none;
-}
-.section-3 .card{
-    position: absolute;
-    bottom: -120px;
-    right: 0;
-    left: 0;
-    width: 100%;
-    padding: 40px 50px 25px;
-    background-color: #68e5a2;
-    border-radius: 20px;
-    z-index: 2;
-}
-.card p{
-    text-align: left;
-}
-
-.card .user{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    
-}
-.user, .rating{
-    margin-top: 20px;
-}
-.card .grid{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-.grid .full{
-    grid-area: 1 / 2 / 2 / 4;
-}
-.grid .impty{
-    display: flex;
-    align-items: flex-end;
+.section-3 .big-card{
+    background: #68e5a2;
+    color: #333;
 }
 
 
@@ -336,69 +285,26 @@ nav button.nav-toggler{
     margin-top: 300px;
     text-align: start;
 }
-.section-4 .container{
-    position: relative;
-}
-.section-4 .card{
-    position: absolute;
-    bottom: -120px;
-    width: 100%;
-    padding: 40px 50px 25px;
-    background-color: #395be0;
-    color: #fff;
-    border-radius: 20px;
-    z-index: 2;
-}
-.section-4 .card p{
-    color: #fff;
-}
 .section-4 .greet button{
     background: #395be0;
     color: #fff;
 }
-.section-4 .grid .full{
-    grid-area: 1/1/2/3;
-}
-.section-4 .grid .impty{
-    justify-content: flex-end;
-}
-.section-4 .greet{
-    grid-area: 1/1/2/2;
-}
-.section-4 .info{
-    grid-area: 2 / 1 / 3 / 2;
-}
-.section-4 .sec-img{
-    grid-area: 1 / 2 / 3 / 3;
-    align-items: flex-end;
-    margin-left: 40px;
-    width: 100%;
-    margin-bottom: 30px;
+.section-4 .big-card, .section-4 .big-card p{
+    background: #395be0;
+    color: #fff;
 }
 
+
+/*Section 5*/
 .section-5{
-    margin-top: 300px;
-}
-.sec5-card{
-    width: 100%;
-    border: 2px solid #404040;
-    border-radius: 30px;
-    padding: 20px;
-    margin-bottom: 40px;
-    text-align: start;
+    margin-top: 120px;
 }
 .sec5-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
-.sec5-grid .sec5-card{
-    position: relative;
-    min-height: 300px;
-    border-radius: 15px;
-    padding: 25px 30px 20px 20px;
-}
-.sec5-grid .sec5-card .icon{
+.sec5-grid .icon{
     vertical-align: middle;
     font-size: 32px;
     padding: 10px;
@@ -408,62 +314,55 @@ nav button.nav-toggler{
     color: #333;
     margin-bottom: 30px;
 }
-.sec5-grid .sec5-card small{
+.small-card small{
     display: block;
     margin-top: 5px;
 }
-.sec5-grid .sec5-card a{
+.small-card a{
     color: #333;
     position: absolute;
     bottom: 20px;
     left: 20px;
 }
 .world{
-    position: relative;
     width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 40px 40px 50px;
-}
-.world-greet{
-    max-width: 250px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
 }
 .world-greet h2{
     margin-bottom: 15px;
     line-height: 1.1em;
 }
 .world-img-info{
+    position: relative;
+    grid-area: 1/2/2/4;
     text-align: center;
     display: flex;
     align-items: center;
     width: 100%;
     height: 100%;
-    justify-content: space-around;
-    margin-left: 30px;
+    justify-content: space-evenly;
 }
 .world-img-info h1{
     font-size: 70px;
 }
 .world-map{
     position: absolute;
-    top: 0;
-    right: 2%;
-    width: 68%;
-    height: 110%;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 120%;
+    transform: translate(-50%, -50%);
     opacity: 0.2;
     z-index: -99;
 }
 .start-card{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-    min-height: 200px;
+    grid-gap: 30px;
     text-align: center;
     align-items: center;
-}
-.start-card h3{
-    text-align: start;
-    margin-left: 35px;
 }
 .start{
     display: inline-flex;
@@ -496,7 +395,7 @@ footer{
 .foot-content{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 40px;
+    grid-gap: 40px;
     padding: 50px 0px;
 }
 .foot-logo{
@@ -553,6 +452,9 @@ li{
      justify-content: space-between;
      align-items: flex-end;
  }
+ .search-social .stores button{
+     margin: 7px 0px 0px 7px;
+ }
 .social-links i{
     color: #fff;
     margin-left: 5px;
@@ -563,7 +465,10 @@ li{
     margin-right:10px;
 }
 .search-social form{
-    height: 30px;  
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #000;
     border: 1.5px solid #fff;
     border-radius: 5px;
@@ -573,20 +478,17 @@ li{
     color: #9a9a9a;
     border: none;
     font-size: 14px;
-    height: 100%;
-    float: left;
     padding: 6px;
     outline: none;
 }
 form button{
-    height: 100%;
-    padding: 0px 8px;
-    float: left;
+    padding: 6px 10px;
     font-size: 18px;
     border: none;
     background: #000;
     color: #6f6f6f;
     cursor: pointer;
+    margin: 0px;
 }
 .rights-terms{
     padding: 50px 0px;
@@ -629,10 +531,51 @@ form button{
     nav button.nav-toggler{
         display: block;
     }
+    .sec-content .info , .sec-content{ 
+        flex-wrap: wrap;
+    }
+    .sec-img img, .details-list, .details-list:last-child{
+        width: 95%;
+        margin: auto;
+    }
+    .foot-content{
+        text-align: start;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .details{
+        grid-area: auto;
+    }
 }
 
 @media screen and (max-width: 730px){
     nav .nav-right a{
         display: none;
     }
+    .section-1 img{
+        width: 95%;
+    }
+    .stats{
+        width: 48%;
+    }
+    .sec5-grid{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .small-card{
+        min-height: 250px;
+    }
+    .world, .start-card{
+        text-align: center;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .world-info{
+        width: 98%;
+        margin: auto;
+    }
+    .world-img-info, .search-social .link-flex{
+        grid-area: auto;
+        flex-wrap: wrap;
+    }
+    
 }
